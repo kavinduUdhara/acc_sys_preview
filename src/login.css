@@ -23,16 +23,53 @@ body{
     @apply text-4xl m-5
 }
 form{
-    @apply pt-7 flex flex-col w-full pl-4 justify-center items-center;
+    @apply pt-7 flex flex-col w-full pl-4 bg-slate-500 justify-center items-center;
 }
-input[type="text"],.login-holder input[type="password"]{
+/* input[type="text"],.login-holder input[type="password"]{
     @apply w-9/12 p-3 rounded-md ;
     border-bottom: 3px solid rgb(29, 125, 208);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-}
+} */
 input[type="submit"]{
     @apply bg-cyan-800 text-white cursor-pointer p-2 pl-4 pr-4 rounded-lg place-self-end mr-7;
     justify-self: end;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 
 }
+.input-group {
+    margin-top: 30px;
+    width: 100%;
+    font-size: 1.25rem;
+    position: relative;
+    --primary: #2196f3;
+    margin-left: 50px;
+  }
+  
+input {
+    width: 100%;
+    padding: 1rem;
+    all: unset;
+    color: black;
+    border: 1px solid transparent;
+    padding: 1rem;
+    border-radius: 16px;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #040404;
+    pointer-events: none;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+input:focus {
+    border: 1px solid var(--primary);
+  }
+  
+input:is(:focus, :valid) ~ label {
+    transform: translateY(-120%);
+    background-color: #1a1a1a;
+    padding-inline: 0.6rem;
+    color: var(--primary);
+  }
