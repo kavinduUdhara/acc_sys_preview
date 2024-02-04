@@ -1,0 +1,20 @@
+{
+  "name": "acc_sys_preview",
+  "version": "1.0.0",
+  "description": "Accounting System",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-all": "npx tailwindcss -i ./src/all.css -o ./docs/css/all.css --watch",
+    "build-login": "npx tailwindcss -i ./src/login.css -o ./docs/css/login.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

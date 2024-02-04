@@ -1,0 +1,38 @@
+body{
+    @apply w-full h-fit min-h-screen flex;
+}
+.left{
+    @apply w-4/12 bg-cover bg-center h-screen;
+    background-image: url("../img/floating-acc-elements.jpg");
+}
+.right-holder{
+    @apply w-8/12 relative
+}
+.right{
+    @apply absolute bg-white h-full w-full right-0 p-10 flex flex-col justify-center items-center;
+    border-start-start-radius: 50px;
+    border-end-start-radius: 50px;
+    width: 110%;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.login-holder{
+    @apply w-full max-w-96 flex flex-col items-center justify-center;
+}
+.login-holder h1{
+    @apply text-4xl m-5
+}
+form{
+    @apply pt-7 flex flex-col w-full pl-4 justify-center items-center;
+}
+input[type="text"],.login-holder input[type="password"]{
+    @apply w-9/12 p-3 rounded-md ;
+    border-bottom: 3px solid rgb(29, 125, 208);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+input[type="submit"]{
+    @apply bg-cyan-800 text-white cursor-pointer p-2 pl-4 pr-4 rounded-lg place-self-end mr-7;
+    justify-self: end;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+
+}
